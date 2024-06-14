@@ -28,4 +28,13 @@
     <string name="forgot_password">Forgot Password?</string>
     <string name="dont_have_an_account">Don\'t have an account?</string>
     <string name="sign_up">Sign Up</string>
+    <string name="sign_up_title">Sign Up</string>
+    <string name="username_title">Username</string>
+    <string name="username_hint">your username</string>
+    <string name="already_have_an_account">Already have an account?</string>
+    <string name="title_activity_dashboard">DashboardActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_collect_device">Collect Device</string>
+    <string name="title_profile">Profile</string>
+    <string name="welcome">Welcome !</string>
 </resources>

@@ -1,4 +1,4 @@
-package com.example.trashure.ui.dashboard
+package com.example.trashure.ui.startapp
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge

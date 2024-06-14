@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/li_home_off"
+        android:title="@string/title_home" />
+
+    <item
+        android:id="@+id/navigation_collectDevice"
+        android:icon="@drawable/li_recycle_off"
+        android:title="@string/title_collect_device" />
+
+    <item
+        android:id="@+id/navigation_profile"
+        android:icon="@drawable/li_user_off"
+        android:title="@string/title_profile" />
+
+</menu>
