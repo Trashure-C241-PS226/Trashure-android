@@ -20,7 +20,6 @@
     <string name="error_empty_email">Please insert your email</string>
     <string name="error_invalid_email">The email is invalid</string>
     <string name="error_empty_password">Please insert your password</string>
-    <string name="error_password_more_8">Password must more than 8 character</string>
     <string name="error_empty_name">Please insert your name</string>
     <string name="email_hint">youremail@gmail.com</string>
     <string name="password">Password</string>
@@ -37,5 +36,6 @@
     <string name="title_collect_device">Collect Device</string>
     <string name="title_profile">Profile</string>
     <string name="welcome">Welcome !</string>
-    <string name="testing">Halo test !</string>
+    <string name="registration_success">Register Successfully</string>
+    <string name="registration_message">Please login with the account you have created</string>
 </resources>

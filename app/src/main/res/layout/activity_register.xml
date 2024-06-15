@@ -8,6 +8,18 @@
     android:background="@color/background"
     tools:context=".ui.register.RegisterActivity">
 
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="290dp"
+        android:elevation="6dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <ImageView
         android:id="@+id/login_illustration"
         android:layout_width="420dp"
@@ -38,13 +50,13 @@
         android:layout_marginStart="55dp"
         android:layout_marginTop="16dp"
         android:fontFamily="@font/roboto"
-        android:text="@string/username_title"
+        android:text="@string/email_address"
         android:textColor="@color/Primary"
         android:textSize="15sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/signUp_title" />
 
-    <com.example.trashure.ui.custom_view.NameEditText
+    <com.example.trashure.ui.custom_view.EmailEditText
         android:id="@+id/edit_username"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -52,8 +64,8 @@
         android:layout_marginTop="10dp"
         android:background="@drawable/bg_edit_text"
         android:fontFamily="@font/manrope"
-        android:hint="@string/username_hint"
-        android:inputType="textPersonName"
+        android:hint="@string/email_hint"
+        android:inputType="textEmailAddress"
         android:padding="12dp"
         android:textSize="12sp"
         android:translationZ="0dp"
@@ -68,13 +80,13 @@
         android:layout_marginStart="55dp"
         android:layout_marginTop="10dp"
         android:fontFamily="@font/roboto"
-        android:text="@string/email_address"
+        android:text="@string/password"
         android:textColor="@color/Primary"
         android:textSize="15sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edit_username" />
 
-    <com.example.trashure.ui.custom_view.EmailEditText
+    <com.example.trashure.ui.custom_view.PasswordEditText
         android:id="@+id/edit_email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -82,8 +94,8 @@
         android:layout_marginTop="10dp"
         android:background="@drawable/bg_edit_text"
         android:fontFamily="@font/manrope"
-        android:hint="@string/email_hint"
-        android:inputType="textEmailAddress"
+        android:hint="@string/password_hint"
+        android:inputType="textPassword"
         android:padding="12dp"
         android:textSize="12sp"
         android:translationZ="0dp"
@@ -98,13 +110,13 @@
         android:layout_marginStart="55dp"
         android:layout_marginTop="10dp"
         android:fontFamily="@font/roboto"
-        android:text="@string/password"
+        android:text="@string/username_title"
         android:textColor="@color/Primary"
         android:textSize="15sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edit_email" />
 
-    <com.example.trashure.ui.custom_view.PasswordEditText
+    <com.example.trashure.ui.custom_view.NameEditText
         android:id="@+id/edit_password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -112,8 +124,8 @@
         android:layout_marginTop="10dp"
         android:background="@drawable/bg_edit_text"
         android:fontFamily="@font/manrope"
-        android:hint="@string/password_hint"
-        android:inputType="textPassword"
+        android:hint="@string/username_hint"
+        android:inputType="textPersonName"
         android:padding="12dp"
         android:textSize="12sp"
         android:translationZ="0dp"
@@ -163,17 +175,5 @@
             android:textColor="@color/DarkGreen"
             android:textStyle="bold" />
     </LinearLayout>
-
-    <ProgressBar
-        android:id="@+id/progress_bar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="290dp"
-        android:elevation="6dp"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
