@@ -41,15 +41,15 @@ class LoginActivity : AppCompatActivity() {
         val email = binding.editEmail.text.toString()
         val password = binding.editPassword.text.toString()
 
-        viewModel.login(email, password).observe(this@LoginActivity) { response ->
-            when (response) {
+        viewModel.login(email, password).observe(this@LoginActivity) {
+            when (it) {
                 is ApiResponse.Loading -> {
                     showLoading(true)
                 }
 
                 is ApiResponse.Success -> {
                     showLoading(false)
-                    val token = response.data.loginResult?.token
+                    val token = it.data.loginResult?.token
                     viewModel.saveSession(User(email, token!!, true))
                     val intent = Intent(this@LoginActivity, DashboardActivity::class.java)
                     intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
@@ -59,7 +59,7 @@ class LoginActivity : AppCompatActivity() {
 
                 is ApiResponse.Error -> {
                     showLoading(false)
-                    showToast(response.error)
+                    showToast(it.error)
                 }
             }
         }
