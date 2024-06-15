@@ -38,4 +38,21 @@
     <string name="welcome">Welcome !</string>
     <string name="registration_success">Register Successfully</string>
     <string name="registration_message">Please login with the account you have created</string>
+    <string name="ongoing_title">Ongoing</string>
+    <string name="tv_ongoing_model">Iphone 12 Pro</string>
+    <string name="tv_ongoing_brand">Brand</string>
+    <string name="tv_ongoing_storage">Storage</string>
+    <string name="tv_ongoing_ram">RAM</string>
+    <string name="tv_ongoing_collector">Collector</string>
+    <string name="et_ongoing_brand">Apple</string>
+    <string name="et_ongoing_storage">128 GB</string>
+    <string name="et_ongoing_ram">6 GB</string>
+    <string name="et_ongoing_collector">Handaneswari</string>
+    <string name="tv_ongoing_price">Price :</string>
+    <string name="et_ongoing_price">Rp xxx.xxx,xx</string>
+    <string name="tv_ongoing_status">Status :</string>
+    <string name="et_ongoing_status">Available</string>
+    <string name="dasboard_title">Participate in collecting goods with just one click !</string>
+    <string name="tv_collect_device">Collect Device</string>
+    <string name="history_title">History</string>
 </resources>
