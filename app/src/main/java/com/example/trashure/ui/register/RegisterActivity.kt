@@ -10,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.trashure.R
 import com.example.trashure.data.response.ApiResponse
 import com.example.trashure.databinding.ActivityRegisterBinding
+import com.example.trashure.ui.dashboard.DashboardActivity
 import com.example.trashure.ui.login.LoginActivity
 import com.example.trashure.utils.ext.isEmailValid
 import com.example.trashure.viewModelFactory.AuthViewModelFactory
@@ -29,6 +30,10 @@ class RegisterActivity : AppCompatActivity() {
 
         binding.btnSignUp.setOnClickListener {
             register()
+        }
+        binding.tvToLogin.setOnClickListener {
+            val intent = Intent(this@RegisterActivity, LoginActivity::class.java)
+            startActivity(intent)
         }
     }
 
