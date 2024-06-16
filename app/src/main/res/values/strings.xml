@@ -57,4 +57,19 @@
     <string name="history_title">History</string>
     <string name="tv_collect_deviceTitle">Collect your Device !</string>
     <string name="error_empty_section">This section cant be empty</string>
+    <string name="tv_img_title">Upload your device</string>
+    <string name="selected_brand">Selected Brand</string>
+    <string name="device_image">Device Image</string>
+    <string name="tv_collect_model">Model</string>
+    <string name="tv_collect_storage">Storage (GB)</string>
+    <string name="tv_collect_ram">RAM (GB)</string>
+    <string name="tv_collect_duration">Duration of Use (Years)</string>
+    <string name="tv_collect_durationHint">Duration of Use</string>
+    <string name="tv_collect_screen">Screen Size (Inches)</string>
+    <string name="tv_collect_screenHint">Screen Size</string>
+    <string name="tv_collect_camera">Camera (MP)</string>
+    <string name="tv_collect_cameraHint">Camera</string>
+    <string name="tv_collect_battery">Battery Capacity (mAh)</string>
+    <string name="tv_collect_batteryHint">Battery Capacity</string>
+    <string name="btn_predict">Predict</string>
 </resources>
