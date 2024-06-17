@@ -6,13 +6,11 @@ import android.view.View
 import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
-import com.example.trashure.R
 import com.example.trashure.data.model.User
 import com.example.trashure.data.response.ApiResponse
 import com.example.trashure.databinding.ActivityLoginBinding
 import com.example.trashure.ui.dashboard.DashboardActivity
 import com.example.trashure.ui.register.RegisterActivity
-import com.example.trashure.ui.register.RegisterViewModel
 import com.example.trashure.viewModelFactory.AuthViewModelFactory
 
 class LoginActivity : AppCompatActivity() {
@@ -66,7 +64,13 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun showLoading(isLoading: Boolean) {
-        binding.progressBar.visibility = if (isLoading) View.VISIBLE else View.GONE
+        binding.apply {
+            progressBar.visibility = if (isLoading) View.VISIBLE else View.GONE
+            editEmail.isEnabled = !isLoading
+            editEmail.isClickable = !isLoading
+            editPassword.isEnabled = !isLoading
+            editPassword.isClickable = !isLoading
+        }
     }
 
     private fun showToast(message: String) {

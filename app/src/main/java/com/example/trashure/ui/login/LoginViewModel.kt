@@ -6,13 +6,13 @@ import com.example.trashure.data.model.User
 import com.example.trashure.data.repository.AuthRepository
 import kotlinx.coroutines.launch
 
-class LoginViewModel(private val repository: AuthRepository) : ViewModel() {
+class LoginViewModel(private val authRepository: AuthRepository) : ViewModel() {
 
     fun saveSession(user: User) {
         viewModelScope.launch {
-            repository.saveSession(user)
+            authRepository.saveSession(user)
         }
     }
 
-    fun login(name: String, email: String) = repository.login(name, email)
+    fun login(name: String, email: String) = authRepository.login(name, email)
 }

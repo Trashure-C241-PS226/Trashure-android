@@ -66,6 +66,7 @@
             android:textSize="20sp"/>
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/collect_device"
             android:layout_width="130dp"
             android:layout_height="24dp"
             android:layout_marginTop="145dp"

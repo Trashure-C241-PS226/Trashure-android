@@ -32,10 +32,6 @@ class RadioButtonEditText : AppCompatEditText, View.OnClickListener {
         setOnClickListener(this)
     }
 
-    fun setOptions(options: Array<String>) {    // panggil ini di activity
-        this.options = options
-    }
-
     override fun onClick(v: View?) {
         if (options.isNotEmpty()) {
             val builder = AlertDialog.Builder(context)

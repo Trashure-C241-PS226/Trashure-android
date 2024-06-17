@@ -3,7 +3,7 @@ package com.example.trashure.ui.register
 import androidx.lifecycle.ViewModel
 import com.example.trashure.data.repository.AuthRepository
 
-class RegisterViewModel(private val repository: AuthRepository) : ViewModel() {
+class RegisterViewModel(private val authRepository: AuthRepository) : ViewModel() {
 
     fun register(
         name: String,
@@ -13,5 +13,5 @@ class RegisterViewModel(private val repository: AuthRepository) : ViewModel() {
         provinsi: String,
         kabKota: String,
         kecamatan: String
-    ) = repository.register(name, email, password, nomor, provinsi, kabKota, kecamatan)
+    ) = authRepository.register(name, email, password, nomor, provinsi, kabKota, kecamatan)
 }

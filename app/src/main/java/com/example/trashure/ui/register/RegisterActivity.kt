@@ -10,9 +10,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.trashure.R
 import com.example.trashure.data.response.ApiResponse
 import com.example.trashure.databinding.ActivityRegisterBinding
-import com.example.trashure.ui.dashboard.DashboardActivity
 import com.example.trashure.ui.login.LoginActivity
-import com.example.trashure.utils.ext.isEmailValid
 import com.example.trashure.viewModelFactory.AuthViewModelFactory
 
 class RegisterActivity : AppCompatActivity() {
@@ -63,6 +61,7 @@ class RegisterActivity : AppCompatActivity() {
                                 setPositiveButton(getString(R.string.next)) { _, _ ->
                                     val intent =
                                         Intent(this@RegisterActivity, LoginActivity::class.java)
+
                                     intent.flags =
                                         Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
                                     startActivity(intent)
@@ -83,7 +82,15 @@ class RegisterActivity : AppCompatActivity() {
     }
 
     private fun showLoading(isLoading: Boolean) {
-        binding.progressBar.visibility = if (isLoading) View.VISIBLE else View.GONE
+        binding.apply {
+            progressBar.visibility = if (isLoading) View.VISIBLE else View.GONE
+            editEmail.isEnabled = !isLoading
+            editEmail.isClickable = !isLoading
+            editPassword.isEnabled = !isLoading
+            editPassword.isClickable = !isLoading
+            editUsername.isEnabled = !isLoading
+            editUsername.isClickable = !isLoading
+        }
     }
 
     private fun showToast(message: String) {

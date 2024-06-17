@@ -19,16 +19,10 @@ class CollectDeviceFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val collectDeviceViewModel =
-            ViewModelProvider(this).get(CollectDeviceViewModel::class.java)
 
         _binding = FragmentCollectDeviceBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.textCollectDevice
-        collectDeviceViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
-        }
         return root
     }
 
