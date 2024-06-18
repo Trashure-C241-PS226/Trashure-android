@@ -62,19 +62,19 @@ dependencies {
 
     // Coroutines
     implementation(libs.kotlinx.coroutines.android)
-    implementation (libs.kotlinx.coroutines.core)
+    implementation(libs.kotlinx.coroutines.core)
     implementation(libs.androidx.lifecycle.livedata.ktx)
     implementation(libs.androidx.lifecycle.viewmodel.ktx)
 
     // Room
     implementation(libs.androidx.room.runtime)
-    implementation (libs.androidx.preference)
+    implementation(libs.androidx.preference)
     kapt(libs.androidx.room.compiler)
     implementation(libs.androidx.room.ktx)
 
     // Retrofit
-    implementation (libs.converter.gson)
-    implementation (libs.retrofit)
+    implementation(libs.converter.gson)
+    implementation(libs.retrofit)
     implementation(libs.logging.interceptor)
     implementation(libs.androidx.lifecycle.runtime.ktx)
 

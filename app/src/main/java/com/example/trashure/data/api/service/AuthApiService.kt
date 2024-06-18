@@ -29,9 +29,4 @@ interface AuthApiService {
         @Field("email") email: String,
         @Field("password") password: String
     ) : LoginResponse
-
-    @GET("users/{id}")
-    suspend fun getUserById(
-        @Path("user_Id") userId: Int
-    ): GetUserByIdResponse
 }

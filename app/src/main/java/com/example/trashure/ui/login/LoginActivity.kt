@@ -66,10 +66,10 @@ class LoginActivity : AppCompatActivity() {
     private fun showLoading(isLoading: Boolean) {
         binding.apply {
             progressBar.visibility = if (isLoading) View.VISIBLE else View.GONE
-            editEmail.isEnabled = !isLoading
-            editEmail.isClickable = !isLoading
-            editPassword.isEnabled = !isLoading
-            editPassword.isClickable = !isLoading
+            listOf(editEmail, editPassword, btnLogin).forEach {
+                it.isEnabled = !isLoading
+                it.isClickable = !isLoading
+            }
         }
     }
 

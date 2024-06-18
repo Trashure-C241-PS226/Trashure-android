@@ -47,10 +47,6 @@ class HomeFragment : Fragment() {
         viewModel.getSession().observe(viewLifecycleOwner) { user ->
             binding.username.text = user.email
         }
-
-//        binding.collectDevice.setOnClickListener {
-//            findNavController().navigate(R.id.navigation_collectDevice)
-//        }
     }
 
     private fun getTokenUser(): String {

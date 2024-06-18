@@ -5,6 +5,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.example.trashure.data.repository.Repository
 import com.example.trashure.di.Injection
+import com.example.trashure.ui.dashboard.screen.collect_device.CollectDeviceViewModel
 import com.example.trashure.ui.dashboard.screen.home.HomeViewModel
 
 class ViewModelFactory(private val repository: Repository) :
@@ -15,6 +16,10 @@ class ViewModelFactory(private val repository: Repository) :
         return when {
             modelClass.isAssignableFrom(HomeViewModel::class.java) -> {
                 HomeViewModel(repository) as T
+            }
+
+            modelClass.isAssignableFrom(CollectDeviceViewModel::class.java) -> {
+                CollectDeviceViewModel(repository) as T
             }
 
             else -> throw IllegalArgumentException("Unknown ViewModel class: " + modelClass.name)

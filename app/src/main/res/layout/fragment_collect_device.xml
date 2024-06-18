@@ -188,31 +188,6 @@
                 app:layout_constraintTop_toBottomOf="@id/tv_collect_ram" />
 
             <TextView
-                android:id="@+id/tv_collect_duration"
-                style="@style/TextStyle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="10dp"
-                android:text="@string/tv_collect_duration"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/et_collect_ram" />
-
-            <com.example.trashure.ui.custom_view.NumericEditText
-                android:id="@+id/et_collect_duration"
-                style="@style/HintStyle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="20dp"
-                android:layout_marginTop="5dp"
-                android:background="@drawable/collect_et_bg"
-                android:hint="@string/et_collect_durationHint"
-                android:padding="10dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tv_collect_duration" />
-
-            <TextView
                 android:id="@+id/tv_collect_screen"
                 style="@style/TextStyle"
                 android:layout_width="match_parent"
@@ -221,7 +196,7 @@
                 android:layout_marginTop="10dp"
                 android:text="@string/tv_collect_screen"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/et_collect_duration" />
+                app:layout_constraintTop_toBottomOf="@id/et_collect_ram" />
 
             <com.example.trashure.ui.custom_view.DecimalEditText
                 android:id="@+id/et_collect_screen"
@@ -287,6 +262,31 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tv_collect_battery" />
 
+            <TextView
+                android:id="@+id/tv_collect_duration"
+                style="@style/TextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/tv_collect_duration"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/et_collect_battery" />
+
+            <com.example.trashure.ui.custom_view.NumericEditText
+                android:id="@+id/et_collect_duration"
+                style="@style/HintStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/collect_et_bg"
+                android:hint="@string/et_collect_durationHint"
+                android:padding="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_collect_duration" />
+
             <Button
                 android:id="@+id/btn_predict"
                 android:layout_width="match_parent"
@@ -302,7 +302,19 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/et_collect_battery" />
+                app:layout_constraintTop_toBottomOf="@id/et_collect_duration" />
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:elevation="6dp"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="@+id/btn_predict"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

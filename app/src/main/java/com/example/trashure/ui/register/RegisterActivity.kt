@@ -83,12 +83,10 @@ class RegisterActivity : AppCompatActivity() {
     private fun showLoading(isLoading: Boolean) {
         binding.apply {
             progressBar.visibility = if (isLoading) View.VISIBLE else View.GONE
-            editEmail.isEnabled = !isLoading
-            editEmail.isClickable = !isLoading
-            editPassword.isEnabled = !isLoading
-            editPassword.isClickable = !isLoading
-            editUsername.isEnabled = !isLoading
-            editUsername.isClickable = !isLoading
+            listOf(editEmail, editPassword, editUsername, btnSignUp).forEach {
+                it.isEnabled = !isLoading
+                it.isClickable = !isLoading
+            }
         }
     }
 

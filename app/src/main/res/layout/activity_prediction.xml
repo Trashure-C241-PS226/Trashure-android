@@ -5,6 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background"
     tools:context=".ui.setor.prediction.PredictionActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -71,7 +72,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="20dp"
-            android:layout_marginTop="25dp"
+            android:layout_marginTop="40dp"
             android:background="@drawable/predict_tv_bg"
             android:elevation="5dp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -223,7 +224,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="20dp"
-            android:layout_marginBottom="40dp"
+            android:layout_marginBottom="8dp"
             android:background="@drawable/btn_background"
             android:fontFamily="@font/roboto_medium"
             android:text="@string/btn_next"
@@ -231,8 +232,7 @@
             android:textColor="@color/Secondary"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/predictResult_layout" />
+            app:layout_constraintStart_toStartOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
