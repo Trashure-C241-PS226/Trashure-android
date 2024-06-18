@@ -123,7 +123,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/et_collect_brand" />
 
-            <com.example.trashure.ui.custom_view.NameEditText
+            <com.example.trashure.ui.custom_view.StringEditText
                 android:id="@+id/et_collect_model"
                 style="@style/HintStyle"
                 android:layout_width="match_parent"

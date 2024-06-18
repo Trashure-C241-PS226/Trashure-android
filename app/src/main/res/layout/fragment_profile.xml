@@ -150,7 +150,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/et_phoneNumber" />
 
-        <com.example.trashure.ui.custom_view.NameEditText
+        <com.example.trashure.ui.custom_view.StringEditText
             android:id="@+id/et_province"
             style="@style/hintProfileTextStyle"
             android:layout_width="match_parent"
@@ -175,7 +175,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/et_province" />
 
-        <com.example.trashure.ui.custom_view.NameEditText
+        <com.example.trashure.ui.custom_view.StringEditText
             android:id="@+id/et_city"
             style="@style/hintProfileTextStyle"
             android:layout_width="match_parent"
@@ -200,7 +200,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/et_city" />
 
-        <com.example.trashure.ui.custom_view.NameEditText
+        <com.example.trashure.ui.custom_view.StringEditText
             android:id="@+id/et_subdistrict"
             style="@style/hintProfileTextStyle"
             android:layout_width="match_parent"
@@ -215,6 +215,7 @@
             app:layout_constraintTop_toBottomOf="@id/tv_subdistrict" />
 
         <Button
+            android:id="@+id/btn_edit_profile"
             android:layout_width="match_parent"
             android:layout_height="45dp"
             android:layout_marginVertical="20dp"
@@ -224,7 +225,26 @@
             android:fontFamily="@font/roboto_medium"
             android:textColor="@color/MedGreen"
             android:textSize="14sp"
+            android:visibility="visible"
             android:background="@drawable/edit_profile_bg"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/et_subdistrict"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <Button
+            android:id="@+id/btn_save_profile"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginVertical="20dp"
+            android:layout_marginHorizontal="60dp"
+            android:text="@string/btn_save_profile"
+            android:textAllCaps="false"
+            android:fontFamily="@font/roboto_medium"
+            android:textColor="@color/Secondary"
+            android:textSize="14sp"
+            android:background="@drawable/save_profile_bg"
+            android:visibility="invisible"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/et_subdistrict"
@@ -331,7 +351,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:layout_marginBottom="70dp"
+        android:layout_marginBottom="75dp"
         android:text="@string/btn_logout"
         android:textAllCaps="false"
         android:textColor="@color/Red"
