@@ -69,24 +69,23 @@
             android:id="@+id/collect_device"
             android:layout_width="150dp"
             android:layout_height="28dp"
-            android:layout_marginTop="150dp"
             android:layout_marginStart="160dp"
+            android:layout_marginTop="150dp"
             android:background="@drawable/collect_bg"
-            android:elevation="8dp">
+            android:elevation="10dp">
 
             <TextView
                 android:id="@+id/tv_collect_device"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
-                android:text="@string/tv_collect_device"
                 android:fontFamily="@font/roboto_bold"
-                android:textSize="13sp"
+                android:text="@string/tv_collect_device"
                 android:textColor="@color/DarkGreen2"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
+                android:textSize="13sp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
                 android:id="@+id/ic_collect_arrow"
@@ -94,9 +93,9 @@
                 android:layout_height="13dp"
                 android:layout_marginStart="8dp"
                 android:src="@drawable/ic_collect_arrow"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@id/tv_collect_device"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"/>
+                app:layout_constraintTop_toTopOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -119,12 +118,12 @@
         android:id="@+id/rv_ongoing_item"
         android:layout_width="0dp"
         android:layout_height="160dp"
-        android:layout_marginTop="6dp"
         android:layout_marginHorizontal="30dp"
-        tools:listitem="@layout/ongoing_row"
+        android:layout_marginTop="6dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_ongoing" />
+        app:layout_constraintTop_toBottomOf="@id/tv_ongoing"
+        tools:listitem="@layout/ongoing_row" />
 
     <TextView
         android:id="@+id/tv_history"
@@ -143,11 +142,11 @@
         android:id="@+id/rv_history_item"
         android:layout_width="0dp"
         android:layout_height="160dp"
-        android:layout_marginTop="6dp"
         android:layout_marginHorizontal="30dp"
-        tools:listitem="@layout/ongoing_row"
+        android:layout_marginTop="6dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_history" />
+        app:layout_constraintTop_toBottomOf="@id/tv_history"
+        tools:listitem="@layout/ongoing_row" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

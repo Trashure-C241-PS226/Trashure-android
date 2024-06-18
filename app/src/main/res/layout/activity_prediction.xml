@@ -57,25 +57,25 @@
             android:layout_height="120dp"
             android:layout_marginTop="30dp"
             android:background="@drawable/predict_tv_bg"
-            android:padding="20dp"
-            android:elevation="5dp"
             android:contentDescription="@string/device_image"
+            android:elevation="5dp"
+            android:padding="20dp"
             android:scaleType="centerCrop"
             android:src="@drawable/ic_collect_camera"
-            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/category_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="25dp"
             android:layout_marginHorizontal="20dp"
-            android:elevation="5dp"
+            android:layout_marginTop="25dp"
             android:background="@drawable/predict_tv_bg"
-            app:layout_constraintStart_toStartOf="parent"
+            android:elevation="5dp"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/img_layout">
 
             <TextView
@@ -151,7 +151,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="5dp"
-                android:text="@string/tv_category3"
+                android:text="@string/tv_category4"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tv_price3" />
 
@@ -164,9 +164,9 @@
                 android:layout_marginTop="3dp"
                 android:layout_marginBottom="8dp"
                 android:text="@string/tv_price4"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tv_category4"
-                app:layout_constraintBottom_toBottomOf="parent"/>
+                app:layout_constraintTop_toBottomOf="@id/tv_category4" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -174,12 +174,12 @@
             android:id="@+id/predictResult_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="25dp"
             android:layout_marginHorizontal="20dp"
-            android:elevation="5dp"
+            android:layout_marginTop="25dp"
             android:background="@drawable/predict_tv_bg"
-            app:layout_constraintStart_toStartOf="parent"
+            android:elevation="5dp"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/category_layout">
 
             <TextView
@@ -187,24 +187,24 @@
                 style="@style/CategoryTextStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
                 android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
                 android:text="@string/tv_predictResult"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"/>
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/tv_categoryResult"
                 style="@style/ResultTextStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="10dp"
-                android:layout_marginStart="25dp"
                 android:text="@string/tv_categoryResult"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tv_predictResult"
-                app:layout_constraintBottom_toBottomOf="parent"/>
+                app:layout_constraintTop_toBottomOf="@id/tv_predictResult" />
 
             <TextView
                 android:id="@+id/tv_priceResult"
@@ -214,7 +214,7 @@
                 android:layout_marginStart="5dp"
                 android:text="@string/tv_priceResult"
                 app:layout_constraintStart_toEndOf="@id/tv_categoryResult"
-                app:layout_constraintTop_toTopOf="@id/tv_categoryResult"/>
+                app:layout_constraintTop_toTopOf="@id/tv_categoryResult" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -223,15 +223,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="20dp"
-            android:layout_marginBottom="20dp"
+            android:layout_marginBottom="40dp"
             android:background="@drawable/btn_background"
             android:fontFamily="@font/roboto_medium"
             android:text="@string/btn_next"
             android:textAllCaps="false"
             android:textColor="@color/Secondary"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/predictResult_layout" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

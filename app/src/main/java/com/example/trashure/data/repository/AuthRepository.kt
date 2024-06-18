@@ -13,7 +13,7 @@ import retrofit2.HttpException
 
 class AuthRepository(
     private val userPreference: UserPreference,
-    private val apiService: AuthApiService
+    private val authApiService: AuthApiService
 ) {
 
     suspend fun saveSession(user: User) {
@@ -32,7 +32,7 @@ class AuthRepository(
         emit(ApiResponse.Loading)
         try {
             val response =
-                apiService.register(name, email, password, nomor, provinsi, kabKota, kecamatan)
+                authApiService.register(name, email, password, nomor, provinsi, kabKota, kecamatan)
             emit(ApiResponse.Success(response))
         } catch (e: HttpException) {
             val jsonInString = e.response()?.errorBody()?.string()
@@ -47,7 +47,7 @@ class AuthRepository(
     fun login(email: String, password: String): LiveData<ApiResponse<LoginResponse>> = liveData {
         emit(ApiResponse.Loading)
         try {
-            val response = apiService.login(email, password)
+            val response = authApiService.login(email, password)
             emit(ApiResponse.Success(response))
         } catch (e: HttpException) {
             val jsonInString = e.response()?.errorBody()?.string()

@@ -32,6 +32,6 @@ interface AuthApiService {
 
     @GET("users/{id}")
     suspend fun getUserById(
-        @Path("id") id: String
+        @Path("user_Id") userId: Int
     ): GetUserByIdResponse
 }

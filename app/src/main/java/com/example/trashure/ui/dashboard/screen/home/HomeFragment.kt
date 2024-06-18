@@ -7,6 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
+import com.example.trashure.R
 import com.example.trashure.data.api.config.ApiConfig
 import com.example.trashure.data.pref.UserPreference
 import com.example.trashure.data.repository.Repository
@@ -45,6 +47,10 @@ class HomeFragment : Fragment() {
         viewModel.getSession().observe(viewLifecycleOwner) { user ->
             binding.username.text = user.email
         }
+
+//        binding.collectDevice.setOnClickListener {
+//            findNavController().navigate(R.id.navigation_collectDevice)
+//        }
     }
 
     private fun getTokenUser(): String {
