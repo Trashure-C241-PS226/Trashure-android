@@ -88,4 +88,7 @@ dependencies {
 
     // Glide
     implementation(libs.glide)
+
+    // de.hdodenhof
+    implementation(libs.circleimageview)
 }
