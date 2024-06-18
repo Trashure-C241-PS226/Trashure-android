@@ -11,4 +11,22 @@
         <item name="android:textSize">11sp</item>
         <item name="android:fontFamily">@font/roboto</item>
     </style>
+
+    <style name="CategoryTextStyle">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:fontFamily">@font/roboto_medium</item>
+    </style>
+
+    <style name="PriceTextStyle">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:fontFamily">@font/roboto</item>
+    </style>
+
+    <style name="ResultTextStyle">
+        <item name="android:textColor">@color/MedGreen</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:fontFamily">@font/roboto</item>
+    </style>
 </resources>

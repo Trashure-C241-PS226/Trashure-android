@@ -73,4 +73,16 @@
     <string name="btn_predict">Predict</string>
     <string name="et_collect_model">Iphone 12 Pro</string>
     <string name="et_collect_durationHint">3</string>
+    <string name="tv_predict_deviceTitle">Price Prediction</string>
+    <string name="tv_category1">Category 1</string>
+    <string name="tv_price1">Rp 0,00 — Rp 199.000,00</string>
+    <string name="tv_category2">Category 2</string>
+    <string name="tv_price2">Rp 200.000,00 — Rp 399.000,00</string>
+    <string name="tv_category3">Category 3</string>
+    <string name="tv_price3">Rp 400.000,00 — Rp 599.000,00</string>
+    <string name="tv_price4">Rp 600.000,00 — Rp 799.000,00</string>
+    <string name="tv_predictResult">Predicted Result :</string>
+    <string name="tv_categoryResult">Category x :</string>
+    <string name="tv_priceResult">Rp x,xx — Rp xxx.xxx,xx</string>
+    <string name="btn_next">Next</string>
 </resources>
