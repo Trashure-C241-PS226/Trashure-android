@@ -8,7 +8,7 @@ import androidx.appcompat.widget.AppCompatEditText
 
 class RadioButtonEditText : AppCompatEditText, View.OnClickListener {
 
-    private var options: Array<String> = arrayOf("Apple", "Samsung", "Google")
+    private var options: Array<String> = arrayOf("Apple", "Asus", "Blackberry", "CAT", "Google", "Huawei", "LG", "Motorola", "Nokia", "OnePlus", "Oppo", "Realme", "Samsung", "Sony", "Vivo", "Xiaomi")
 
     constructor(context: Context) : super(context) {
         init()

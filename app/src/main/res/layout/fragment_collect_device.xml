@@ -123,7 +123,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/et_collect_brand" />
 
-            <com.example.trashure.ui.custom_view.NumericEditText
+            <com.example.trashure.ui.custom_view.NameEditText
                 android:id="@+id/et_collect_model"
                 style="@style/HintStyle"
                 android:layout_width="match_parent"
@@ -131,7 +131,7 @@
                 android:layout_marginHorizontal="20dp"
                 android:layout_marginTop="5dp"
                 android:background="@drawable/collect_et_bg"
-                android:hint="@string/tv_collect_model"
+                android:hint="@string/et_collect_model"
                 android:padding="10dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -156,7 +156,7 @@
                 android:layout_marginHorizontal="20dp"
                 android:layout_marginTop="5dp"
                 android:background="@drawable/collect_et_bg"
-                android:hint="@string/tv_ongoing_storage"
+                android:hint="@string/et_ongoing_storage"
                 android:padding="10dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -181,7 +181,7 @@
                 android:layout_marginHorizontal="20dp"
                 android:layout_marginTop="5dp"
                 android:background="@drawable/collect_et_bg"
-                android:hint="@string/tv_ongoing_ram"
+                android:hint="@string/et_ongoing_ram"
                 android:padding="10dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -206,7 +206,7 @@
                 android:layout_marginHorizontal="20dp"
                 android:layout_marginTop="5dp"
                 android:background="@drawable/collect_et_bg"
-                android:hint="@string/tv_collect_durationHint"
+                android:hint="@string/et_collect_durationHint"
                 android:padding="10dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -223,7 +223,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/et_collect_duration" />
 
-            <com.example.trashure.ui.custom_view.NumericEditText
+            <com.example.trashure.ui.custom_view.DecimalEditText
                 android:id="@+id/et_collect_screen"
                 style="@style/HintStyle"
                 android:layout_width="match_parent"
@@ -231,7 +231,7 @@
                 android:layout_marginHorizontal="20dp"
                 android:layout_marginTop="5dp"
                 android:background="@drawable/collect_et_bg"
-                android:hint="@string/tv_collect_screenHint"
+                android:hint="@string/et_collect_screenHint"
                 android:padding="10dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -256,7 +256,7 @@
                 android:layout_marginHorizontal="20dp"
                 android:layout_marginTop="5dp"
                 android:background="@drawable/collect_et_bg"
-                android:hint="@string/tv_collect_cameraHint"
+                android:hint="@string/et_collect_cameraHint"
                 android:padding="10dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -281,7 +281,7 @@
                 android:layout_marginHorizontal="20dp"
                 android:layout_marginTop="5dp"
                 android:background="@drawable/collect_et_bg"
-                android:hint="@string/tv_collect_batteryHint"
+                android:hint="@string/et_collect_batteryHint"
                 android:padding="10dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -292,7 +292,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="20dp"
-                android:layout_marginVertical="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="75dp"
                 android:background="@drawable/btn_background"
                 android:fontFamily="@font/roboto_medium"
                 android:text="@string/btn_predict"
