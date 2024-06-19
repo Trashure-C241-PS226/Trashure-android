@@ -7,6 +7,7 @@ import com.example.trashure.data.repository.Repository
 import com.example.trashure.di.Injection
 import com.example.trashure.ui.dashboard.screen.collect_device.CollectDeviceViewModel
 import com.example.trashure.ui.dashboard.screen.home.HomeViewModel
+import com.example.trashure.ui.dashboard.screen.profile.ProfileViewModel
 import com.example.trashure.ui.setor.prediction.PredictionViewModel
 
 class ViewModelFactory(private val repository: Repository) :
@@ -25,6 +26,10 @@ class ViewModelFactory(private val repository: Repository) :
 
             modelClass.isAssignableFrom(PredictionViewModel::class.java) -> {
                 PredictionViewModel(repository) as T
+            }
+
+            modelClass.isAssignableFrom(ProfileViewModel::class.java) -> {
+                ProfileViewModel(repository) as T
             }
 
             else -> throw IllegalArgumentException("Unknown ViewModel class: " + modelClass.name)
