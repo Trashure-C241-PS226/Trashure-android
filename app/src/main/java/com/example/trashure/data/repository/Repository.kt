@@ -7,11 +7,12 @@ import com.example.trashure.data.model.Predict
 import com.example.trashure.data.model.User
 import com.example.trashure.data.pref.UserPreference
 import com.example.trashure.data.response.ApiResponse
-import com.example.trashure.data.response.CreateItemResponse
 import com.example.trashure.data.response.GetUserByIdResponse
 import com.example.trashure.data.response.PredictResponse
 import com.google.gson.Gson
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.withContext
 import retrofit2.HttpException
 
 class Repository(
@@ -62,20 +63,19 @@ class Repository(
         }
     }
 
-    fun getUserById(userId: Int): LiveData<ApiResponse<GetUserByIdResponse>> = liveData {
-        emit(ApiResponse.Loading)
-        try {
-            val response = apiService.getUserById(userId)
-            emit(ApiResponse.Success(response))
-        } catch (e: HttpException) {
-            val jsonInString = e.response()?.errorBody()?.string()
-            val errorBody = Gson().fromJson(jsonInString, CreateItemResponse::class.java)
-            val errorMessage = errorBody.message
-            emit(ApiResponse.Error(errorMessage))
-        } catch (e: Exception) {
-            emit(ApiResponse.Error(e.message.toString()))
+    suspend fun getUserById(): Result<GetUserByIdResponse> {
+        return withContext(Dispatchers.IO) {
+            try {
+                val response = apiService.getUserById()
+                if (response.isSuccessful) {
+                    Result.success(response.body()!!)
+                } else {
+                    Result.failure(HttpException(response))
+                }
+            } catch (e: Exception) {
+                Result.failure(e)
+            }
         }
-
     }
 
 }

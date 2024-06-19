@@ -2,17 +2,16 @@ package com.example.trashure.data.api.service
 
 import com.example.trashure.data.response.GetUserByIdResponse
 import com.example.trashure.data.response.PredictResponse
+import retrofit2.Response
 import retrofit2.http.Field
 import retrofit2.http.FormUrlEncoded
 import retrofit2.http.GET
 import retrofit2.http.POST
-import retrofit2.http.Path
 
 interface ApiService {
-    @GET("users/{id}")
+    @GET("users")
     suspend fun getUserById(
-        @Path("user_Id") userId: Int
-    ): GetUserByIdResponse
+    ): Response<GetUserByIdResponse>
 
     @FormUrlEncoded
     @POST("users/items/predict")

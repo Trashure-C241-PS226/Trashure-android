@@ -12,6 +12,17 @@
     android:layout_height="wrap_content"
     android:background="@color/background">
 
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="360dp"
+        android:elevation="6dp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/tv_profile_title"
         android:layout_width="match_parent"
@@ -244,7 +255,7 @@
             android:textColor="@color/Secondary"
             android:textSize="14sp"
             android:background="@drawable/save_profile_bg"
-            android:visibility="invisible"
+            android:visibility="gone"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/et_subdistrict"
