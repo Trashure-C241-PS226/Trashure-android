@@ -65,20 +65,21 @@
                 app:layout_constraintTop_toTopOf="parent">
 
                 <ImageButton
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
+                    android:id="@+id/upload_img"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
                     android:layout_gravity="center"
-                    android:layout_marginBottom="5dp"
                     android:background="@color/collect_et"
                     android:contentDescription="@string/device_image"
                     android:scaleType="centerCrop"
                     android:src="@drawable/ic_collect_camera" />
 
                 <TextView
+                    android:id="@+id/tv_upload"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginTop="40dp"
+                    android:layout_marginTop="50dp"
                     android:fontFamily="@font/roboto"
                     android:text="@string/tv_img_title"
                     android:textColor="@color/Primary"

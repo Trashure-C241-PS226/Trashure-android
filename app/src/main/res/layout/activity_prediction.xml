@@ -54,13 +54,13 @@
 
         <ImageButton
             android:id="@+id/img_layout"
-            android:layout_width="150dp"
-            android:layout_height="120dp"
+            android:layout_width="200dp"
+            android:layout_height="170dp"
             android:layout_marginTop="30dp"
             android:background="@drawable/predict_tv_bg"
             android:contentDescription="@string/device_image"
-            android:elevation="5dp"
-            android:padding="20dp"
+            android:elevation="10dp"
+            android:padding="5dp"
             android:scaleType="centerCrop"
             android:src="@drawable/ic_collect_camera"
             app:layout_constraintEnd_toEndOf="parent"
@@ -72,7 +72,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="20dp"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="25dp"
             android:background="@drawable/predict_tv_bg"
             android:elevation="5dp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -86,7 +86,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="10dp"
-                android:text="@string/tv_category1"
+                android:text="@string/tv_category0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -108,7 +108,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="5dp"
-                android:text="@string/tv_category2"
+                android:text="@string/tv_category1"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tv_price1" />
 
@@ -130,7 +130,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="5dp"
-                android:text="@string/tv_category3"
+                android:text="@string/tv_category2"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tv_price2" />
 
@@ -152,7 +152,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="5dp"
-                android:text="@string/tv_category4"
+                android:text="@string/tv_category3"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tv_price3" />
 
@@ -163,7 +163,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="25dp"
                 android:layout_marginTop="3dp"
-                android:layout_marginBottom="8dp"
+                android:layout_marginBottom="12dp"
                 android:text="@string/tv_price4"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"

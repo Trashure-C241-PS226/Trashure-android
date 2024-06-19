@@ -2,13 +2,11 @@ package com.example.trashure.data.api.config
 
 import com.example.trashure.BuildConfig
 import com.example.trashure.data.api.service.ApiService
-import com.example.trashure.data.api.service.AuthApiService
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-import java.util.concurrent.TimeUnit
 
 class ApiConfig {
     companion object {
@@ -29,9 +27,6 @@ class ApiConfig {
             val client = OkHttpClient.Builder()
                 .addInterceptor(loggingInterceptor)
                 .addInterceptor(authInterceptor)
-                .connectTimeout(40, TimeUnit.SECONDS)
-                .writeTimeout(40, TimeUnit.SECONDS)
-                .readTimeout(40, TimeUnit.SECONDS)
                 .build()
             val retrofit = Retrofit.Builder()
                 .baseUrl(baseUrl)

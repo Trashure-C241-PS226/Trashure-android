@@ -66,7 +66,7 @@
     <string name="tv_collect_duration">Duration of Use (Years)</string>
     <string name="tv_collect_screen">Screen Size (Inches)</string>
     <string name="et_collect_screenHint">5.4</string>
-    <string name="tv_collect_camera">Camera (MP)</string>
+    <string name="tv_collect_camera">Main Camera (MP)</string>
     <string name="et_collect_cameraHint">12</string>
     <string name="tv_collect_battery">Battery Capacity (mAh)</string>
     <string name="et_collect_batteryHint">2815</string>
@@ -74,18 +74,18 @@
     <string name="et_collect_model">Iphone 12 Pro</string>
     <string name="et_collect_durationHint">3</string>
     <string name="tv_predict_deviceTitle">Price Prediction</string>
+    <string name="tv_category0">Category 0</string>
+    <string name="tv_price1">Rp 0,00 — Rp 2.000.000,00</string>
     <string name="tv_category1">Category 1</string>
-    <string name="tv_price1">Rp 0,00 — Rp 3.265.590,00</string>
+    <string name="tv_price2">Rp 2.000.000,00 — Rp 4.000.000,00</string>
     <string name="tv_category2">Category 2</string>
-    <string name="tv_price2">Rp 3.282.000,00 — Rp 6.546.390,00</string>
-    <string name="tv_category3">Category 3</string>
-    <string name="tv_price3">Rp 6.564.000,00 — Rp 9.828.390,00</string>
-    <string name="tv_price4">Rp 9.846.000,00 — Rp 13.110.390,00</string>
+    <string name="tv_price3">Rp 4.000.000,00 — Rp 8.000.000,00</string>
+    <string name="tv_price4">Rp 5.000.000,00 — Rp 18.000.000,00</string>
     <string name="tv_predictResult">Predicted Result :</string>
-    <string name="tv_categoryResult">Category x :</string>
-    <string name="tv_priceResult">Rp x,xx — Rp xxx.xxx,xx</string>
+    <string name="tv_categoryResult"></string>
+    <string name="tv_priceResult"></string>
     <string name="btn_next">Next</string>
-    <string name="tv_category4">Category 4</string>
+    <string name="tv_category3">Category 3</string>
     <string name="tv_thankyou_title">Congratulations!</string>
     <string name="tv_thankyou_description">You have successfully predict your item</string>
     <string name="btn_okay">Okay</string>
@@ -106,4 +106,5 @@
     <string name="tv_about">About</string>
     <string name="btn_logout">Logout</string>
     <string name="btn_save_profile">Save</string>
+    <string name="kategori">"Kategori "</string>
 </resources>

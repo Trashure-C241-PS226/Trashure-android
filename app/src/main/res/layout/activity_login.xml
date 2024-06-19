@@ -102,33 +102,20 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/password_title" />
 
-    <TextView
-        android:id="@+id/forgot_password"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="55dp"
-        android:fontFamily="@font/roboto_bold"
-        android:text="@string/forgot_password"
-        android:textColor="@color/DarkGreen"
-        android:textSize="12sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edit_password" />
-
     <Button
         android:id="@+id/btn_login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="55dp"
-        android:layout_marginTop="20dp"
         android:background="@drawable/btn_background"
         android:elevation="10dp"
         android:fontFamily="@font/roboto_bold"
         android:text="@string/login_title"
+        android:layout_marginTop="30dp"
         android:textAllCaps="false"
         android:textColor="@color/white"
         android:textSize="14sp"
-        app:layout_constraintTop_toBottomOf="@+id/forgot_password" />
+        app:layout_constraintTop_toBottomOf="@+id/edit_password" />
 
     <LinearLayout
         android:id="@+id/layoutTextRegister"

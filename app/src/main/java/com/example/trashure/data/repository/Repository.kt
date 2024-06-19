@@ -3,10 +3,11 @@ package com.example.trashure.data.repository
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.liveData
 import com.example.trashure.data.api.service.ApiService
+import com.example.trashure.data.model.Predict
 import com.example.trashure.data.model.User
 import com.example.trashure.data.pref.UserPreference
 import com.example.trashure.data.response.ApiResponse
-import com.example.trashure.data.response.CreateItemResponse
+import com.example.trashure.data.response.PredictResponse
 import com.google.gson.Gson
 import kotlinx.coroutines.flow.Flow
 import retrofit2.HttpException
@@ -20,21 +21,27 @@ class Repository(
         return userPreference.getSession()
     }
 
+    suspend fun savePredict(predict: Predict) {
+        userPreference.savePredict(predict)
+    }
+
+    fun getPredict(): Flow<Predict> {
+        return userPreference.getPredict()
+    }
+
     fun predictItem(
         brand: String,
-        model: String,
         storage: String,
         ram: String,
         screenSize: String,
         camera: String,
         batteryCapacity: String,
         tahunPemakaian: Int
-    ): LiveData<ApiResponse<CreateItemResponse>> = liveData {
+    ): LiveData<ApiResponse<PredictResponse>> = liveData {
         emit(ApiResponse.Loading)
         try {
             val response = apiService.postItem(
                 brand,
-                model,
                 storage,
                 ram,
                 screenSize,
@@ -45,7 +52,7 @@ class Repository(
             emit(ApiResponse.Success(response))
         } catch (e: HttpException) {
             val jsonInString = e.response()?.errorBody()?.string()
-            val errorBody = Gson().fromJson(jsonInString, CreateItemResponse::class.java)
+            val errorBody = Gson().fromJson(jsonInString, PredictResponse::class.java)
             val errorMessage = errorBody.message
             emit(ApiResponse.Error(errorMessage))
         } catch (e: Exception) {
