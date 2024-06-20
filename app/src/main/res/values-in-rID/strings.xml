@@ -42,13 +42,13 @@
     <string name="tv_ongoing_brand">Merek</string>
     <string name="tv_ongoing_storage">Penyimpanan</string>
     <string name="tv_ongoing_ram">RAM</string>
-    <string name="tv_ongoing_collector">Pengepul</string>
+    <string name="tv_ongoing_collector">Kategori</string>
     <string name="et_ongoing_brand">Apple</string>
     <string name="et_ongoing_storage">128</string>
     <string name="et_ongoing_ram">6</string>
-    <string name="et_ongoing_collector">Handaneswari</string>
+    <string name="et_ongoing_collector"></string>
     <string name="tv_ongoing_price">Harga :</string>
-    <string name="et_ongoing_price">Rp xxx.xxx,xx</string>
+    <string name="et_ongoing_price"></string>
     <string name="tv_ongoing_status">Status :</string>
     <string name="et_ongoing_status">Tersedia</string>
     <string name="dasboard_title">Berpartisipasi mengumpulkan barang hanya dengan satu klik</string>

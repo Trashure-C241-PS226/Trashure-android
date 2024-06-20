@@ -41,13 +41,13 @@
     <string name="tv_ongoing_brand">Brand</string>
     <string name="tv_ongoing_storage">Storage</string>
     <string name="tv_ongoing_ram">RAM</string>
-    <string name="tv_ongoing_collector">Collector</string>
+    <string name="tv_ongoing_collector">Category</string>
     <string name="et_ongoing_brand">Apple</string>
     <string name="et_ongoing_storage">128</string>
     <string name="et_ongoing_ram">6</string>
-    <string name="et_ongoing_collector">Handaneswari</string>
+    <string name="et_ongoing_collector"></string>
     <string name="tv_ongoing_price">Price :</string>
-    <string name="et_ongoing_price">Rp xxx.xxx,xx</string>
+    <string name="et_ongoing_price"></string>
     <string name="tv_ongoing_status">Status :</string>
     <string name="et_ongoing_status">Available</string>
     <string name="dasboard_title">Participate in collecting goods with just one click</string>

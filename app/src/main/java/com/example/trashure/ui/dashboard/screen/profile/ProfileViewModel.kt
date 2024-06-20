@@ -8,6 +8,8 @@ import androidx.lifecycle.asLiveData
 import androidx.lifecycle.viewModelScope
 import com.example.trashure.data.model.User
 import com.example.trashure.data.repository.Repository
+import com.example.trashure.data.response.DetailUser
+import com.example.trashure.data.response.GetUserByIdResponse
 import kotlinx.coroutines.launch
 
 class ProfileViewModel(private val repository: Repository) : ViewModel() {
@@ -35,6 +37,9 @@ class ProfileViewModel(private val repository: Repository) : ViewModel() {
 
     private val _subdistrict = MutableLiveData<String>()
     val subdistrict: LiveData<String> = _subdistrict
+
+    private val _updateProfileResult = MutableLiveData<Result<GetUserByIdResponse>>()
+    val updateProfileResult: LiveData<Result<GetUserByIdResponse>> = _updateProfileResult
 
     fun getSession(): LiveData<User> {
         return repository.getSession().asLiveData()
@@ -70,6 +75,13 @@ class ProfileViewModel(private val repository: Repository) : ViewModel() {
                     Log.e("ProfileViewModel", "Error: ${error.message}")
                 }
             )
+        }
+    }
+
+    fun updateUser(user: DetailUser) {
+        viewModelScope.launch {
+            val result = repository.updateUser(user)
+            _updateProfileResult.value = result
         }
     }
 }

@@ -15,6 +15,9 @@ import androidx.exifinterface.media.ExifInterface
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.example.trashure.BuildConfig
+import okhttp3.MediaType.Companion.toMediaType
+import okhttp3.MultipartBody
+import okhttp3.RequestBody.Companion.asRequestBody
 import java.io.ByteArrayOutputStream
 import java.io.File
 import java.io.FileOutputStream
@@ -25,7 +28,7 @@ import java.util.Locale
 
 private const val FILENAME_FORMAT = "yyyyMMdd_HHmmss"
 private val timeStamp: String = SimpleDateFormat(FILENAME_FORMAT, Locale.US).format(Date())
-private const val MAXIMAL_SIZE = 1000000
+private const val MAX_SIZE = 1000000
 
 fun ImageView.setImageUrl(url: String?) {
     Glide.with(this.rootView).load(url).apply(RequestOptions())
@@ -76,20 +79,51 @@ fun uriToFile(imageUri: Uri, context: Context): File {
     return myFile
 }
 
-fun reduceFileImage(file: File): File {
-    val bitmap = BitmapFactory.decodeFile(file.path).getRotatedBitmap(file)
+//fun ImageView.toMultipart(context: Context): MultipartBody.Part? {
+//    val drawable = this.drawable ?: return null
+//    val uri = drawable.toUri() // Anda mungkin perlu menyesuaikan ini tergantung pada bagaimana Anda mendapatkan URI dari drawable
+//    val file = uriToFile(uri, context).reduceImgSize()
+//    return MultipartBody.Part.createFormData(
+//        "photo",
+//        file.name,
+//        file.asRequestBody("image/jpeg".toMediaType())
+//    )
+//}
+
+fun File.reduceImgSize(): File {
+    val bitmap = BitmapFactory.decodeFile(this.path)
     var compressQuality = 100
     var streamLength: Int
-    do {
-        val bmpStream = ByteArrayOutputStream()
-        bitmap?.compress(Bitmap.CompressFormat.JPEG, compressQuality, bmpStream)
-        val bmpPicByteArray = bmpStream.toByteArray()
-        streamLength = bmpPicByteArray.size
-        compressQuality -= 5
-    } while (streamLength > MAXIMAL_SIZE)
-    bitmap?.compress(Bitmap.CompressFormat.JPEG, compressQuality, FileOutputStream(file))
-    return file
+
+    ByteArrayOutputStream().apply {
+        do {
+            reset()
+            bitmap.compress(Bitmap.CompressFormat.JPEG, compressQuality, this)
+            streamLength = size()
+            compressQuality -= 5
+        } while (streamLength > MAX_SIZE)
+
+        FileOutputStream(this@reduceImgSize).use {
+            it.write(toByteArray())
+        }
+    }
+    return this
 }
+
+//fun reduceFileImage(file: File): File {
+//    val bitmap = BitmapFactory.decodeFile(file.path).getRotatedBitmap(file)
+//    var compressQuality = 100
+//    var streamLength: Int
+//    do {
+//        val bmpStream = ByteArrayOutputStream()
+//        bitmap?.compress(Bitmap.CompressFormat.JPEG, compressQuality, bmpStream)
+//        val bmpPicByteArray = bmpStream.toByteArray()
+//        streamLength = bmpPicByteArray.size
+//        compressQuality -= 5
+//    } while (streamLength > MAXIMAL_SIZE)
+//    bitmap?.compress(Bitmap.CompressFormat.JPEG, compressQuality, FileOutputStream(file))
+//    return file
+//}
 
 fun Bitmap.getRotatedBitmap(file: File): Bitmap? {
     val orientation = ExifInterface(file).getAttributeInt(

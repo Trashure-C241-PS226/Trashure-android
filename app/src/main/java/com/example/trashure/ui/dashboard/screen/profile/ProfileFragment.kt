@@ -9,13 +9,13 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.activity.result.PickVisualMediaRequest
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import com.bumptech.glide.Glide
 import com.example.trashure.R
+import com.example.trashure.data.response.DetailUser
 import com.example.trashure.databinding.FragmentProfileBinding
 import com.example.trashure.ui.about.AboutActivity
 import com.example.trashure.ui.login.LoginActivity
@@ -57,6 +57,29 @@ class ProfileFragment : Fragment() {
 
         binding.btnSaveProfile.setOnClickListener {
             setEditMode(false)
+            val updatedUser = DetailUser(
+//                image = binding.imgProfile,
+//                if (currentImageUri == null) {
+//                    Toast.makeText(this, "Foto tidak boleh kosong!", Toast.LENGTH_SHORT).show()
+//                } else {
+//                    currentImageUri?.let { uri ->
+//                        val imageFile = uriToFile(uri, requireContext()).reduceImgSize()
+//                        Log.d("Image File", "showImage: ${imageFile.path}")
+//
+//                        val multipartBody = MultipartBody.Part.createFormData(
+//                            "photo",
+//                            imageFile.name,
+//                            imageFile.asRequestBody("image/jpeg".toMediaType())
+//                        )
+//                    }
+//                }
+                username = binding.etUsername.text.toString(),
+                nomor = binding.etPhoneNumber.text.toString(),
+                provinsi = binding.etProvince.text.toString(),
+                kabKota = binding.etCity.text.toString(),
+                kecamatan = binding.etSubdistrict.text.toString()
+            )
+            viewModel.updateUser(updatedUser)
         }
 
         binding.btnChangePicture.setOnClickListener {
@@ -194,6 +217,16 @@ class ProfileFragment : Fragment() {
         }
         viewModel.subdistrict.observe(viewLifecycleOwner) {
             binding.etSubdistrict.setText(it)
+        }
+
+        viewModel.updateProfileResult.observe(viewLifecycleOwner) { result ->
+            result.fold(
+                onSuccess = {
+                    setEditMode(false)
+                },
+                onFailure = {
+                }
+            )
         }
     }
 

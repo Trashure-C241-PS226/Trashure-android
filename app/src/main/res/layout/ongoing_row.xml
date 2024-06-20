@@ -28,7 +28,7 @@
             android:id="@+id/tv_ongoing_model"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="-10dp"
+            android:layout_marginTop="0dp"
             android:layout_marginStart="25dp"
             android:layout_toEndOf="@id/iv_ongoing"
             android:text="@string/tv_ongoing_model"
@@ -172,44 +172,6 @@
                 android:textSize="9sp"
                 android:textColor="@color/DarkGreen"
                 app:layout_constraintStart_toEndOf="@id/tv_ongoing_price"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="130dp"
-            android:layout_height="17dp"
-            android:layout_marginTop="5dp"
-            android:background="@drawable/predict_bg"
-            app:layout_constraintStart_toStartOf="@id/tv_ongoing_collector"
-            app:layout_constraintTop_toBottomOf="@id/price_layout">
-
-            <TextView
-                android:id="@+id/tv_ongoing_status"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="30dp"
-                android:text="@string/tv_ongoing_status"
-                android:fontFamily="@font/roboto_medium"
-                android:textSize="9sp"
-                android:textColor="@color/Secondary"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                />
-
-            <TextView
-                android:id="@+id/et_ongoing_status"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="3dp"
-                android:text="@string/et_ongoing_status"
-                android:fontFamily="@font/roboto_medium"
-                android:textSize="9sp"
-                android:textColor="@color/Secondary"
-                app:layout_constraintStart_toEndOf="@id/tv_ongoing_status"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
                 />

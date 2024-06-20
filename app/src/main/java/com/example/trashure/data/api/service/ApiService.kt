@@ -1,11 +1,14 @@
 package com.example.trashure.data.api.service
 
+import com.example.trashure.data.response.DetailUser
 import com.example.trashure.data.response.GetUserByIdResponse
 import com.example.trashure.data.response.PredictResponse
 import retrofit2.Response
+import retrofit2.http.Body
 import retrofit2.http.Field
 import retrofit2.http.FormUrlEncoded
 import retrofit2.http.GET
+import retrofit2.http.PATCH
 import retrofit2.http.POST
 
 interface ApiService {
@@ -24,4 +27,9 @@ interface ApiService {
         @Field("battery_capacity") batteryCapacity: String,
         @Field("tahun_pemakaian") tahunPemakaian: Int
     ): PredictResponse
+
+    @PATCH("users")
+    suspend fun updateUser(
+        @Body user: DetailUser
+    ): Response<GetUserByIdResponse>
 }

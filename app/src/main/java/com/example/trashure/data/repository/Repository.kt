@@ -7,6 +7,7 @@ import com.example.trashure.data.model.Predict
 import com.example.trashure.data.model.User
 import com.example.trashure.data.pref.UserPreference
 import com.example.trashure.data.response.ApiResponse
+import com.example.trashure.data.response.DetailUser
 import com.example.trashure.data.response.GetUserByIdResponse
 import com.example.trashure.data.response.PredictResponse
 import com.google.gson.Gson
@@ -79,6 +80,19 @@ class Repository(
             } catch (e: Exception) {
                 Result.failure(e)
             }
+        }
+    }
+
+    suspend fun updateUser(user: DetailUser): Result<GetUserByIdResponse> {
+        return try {
+            val response = apiService.updateUser(user)
+            if (response.isSuccessful) {
+                Result.success(response.body()!!)
+            } else {
+                Result.failure(Exception(response.message()))
+            }
+        } catch (e: Exception) {
+            Result.failure(e)
         }
     }
 }

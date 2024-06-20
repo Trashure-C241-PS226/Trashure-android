@@ -102,41 +102,17 @@
     </FrameLayout>
 
     <TextView
-        android:id="@+id/tv_ongoing"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="8dp"
-        android:fontFamily="@font/roboto_black"
-        android:text="@string/ongoing_title"
-        android:textColor="@color/Primary"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/illustration_layout" />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_ongoing_item"
-        android:layout_width="0dp"
-        android:layout_height="160dp"
-        android:layout_marginHorizontal="30dp"
-        android:layout_marginTop="6dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_ongoing"
-        tools:listitem="@layout/ongoing_row" />
-
-    <TextView
         android:id="@+id/tv_history"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="6dp"
+        android:layout_marginTop="20dp"
         android:fontFamily="@font/roboto_black"
         android:text="@string/history_title"
         android:textColor="@color/Primary"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rv_ongoing_item" />
+        app:layout_constraintTop_toBottomOf="@+id/illustration_layout" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_history_item"
