@@ -1,21 +1,22 @@
 package com.example.trashure.ui.thankyou
 
+import android.content.Intent
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import com.example.trashure.R
+import com.example.trashure.databinding.ActivityThankYouBinding
+import com.example.trashure.ui.dashboard.DashboardActivity
 
 class ThankYouActivity : AppCompatActivity() {
+
+    private lateinit var binding: ActivityThankYouBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
-        setContentView(R.layout.activity_thank_you)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
+        binding = ActivityThankYouBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+        binding.btnOkay.setOnClickListener {
+            val intent = Intent(this@ThankYouActivity, DashboardActivity::class.java)
+            startActivity(intent)
         }
     }
 }

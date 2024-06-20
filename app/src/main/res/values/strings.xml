@@ -1,7 +1,6 @@
 <resources>
     <string name="app_name">Trashure</string>
     <string name="splash_logo">splash logo</string>
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="reduce_title">Reduce</string>
     <string name="desc_onboarding_1">Unused e-goods become e-waste in your house?</string>
     <string name="skip">Skip</string>
@@ -24,7 +23,6 @@
     <string name="email_hint">youremail@gmail.com</string>
     <string name="password">Password</string>
     <string name="password_hint">your password</string>
-    <string name="forgot_password">Forgot Password?</string>
     <string name="dont_have_an_account">Don\'t have an account?</string>
     <string name="sign_up">Sign Up</string>
     <string name="sign_up_title">Sign Up</string>
@@ -106,5 +104,20 @@
     <string name="tv_about">About</string>
     <string name="btn_logout">Logout</string>
     <string name="btn_save_profile">Save</string>
-    <string name="kategori">"Kategori "</string>
+    <string name="kategori">"Category "</string>
+    <string name="about_trashure">Trashure is your go-to app for transforming unused electronic devices into treasure. Our platform enables you to easily upload your devices, receive a price estimate based on the specifications you provide, and connect with local collectors. We also help you set a reasonable price based on the device you input. Choose from a range of nearby collectors to find the best match. With Trashure, making the most of your old electronics is just a few taps away. Join our community and start turning your unused devices into value today!</string>
+    <string name="designed_by">Designed By</string>
+    <string name="name_denise">Handaneswari Pramudhyta Imanda</string>
+    <string name="machine_learning">Machine Learning</string>
+    <string name="name_wisang">Andikha Wisanggeni</string>
+    <string name="name_razzi">Razzi Permana Maolana</string>
+    <string name="name_toni">Ahmad Fathoni</string>
+    <string name="cloud_computing">Cloud Computing</string>
+    <string name="name_rajak">Muhammad Razzaaq Zulkahfi</string>
+    <string name="name_radit">Radithya Javas Marchad</string>
+    <string name="mobile_developer">Mobile Developer</string>
+    <string name="name_rafi">Rafifadil Salma Putra</string>
+    <string name="back_button">Back Button</string>
+    <string name="message_logout_confirm">Are you sure want logout?</string>
+    <string name="action_cancel">Cancel</string>
 </resources>

@@ -68,9 +68,9 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/collect_device"
             android:layout_width="150dp"
-            android:layout_height="28dp"
+            android:layout_height="32dp"
             android:layout_marginStart="160dp"
-            android:layout_marginTop="150dp"
+            android:layout_marginTop="148dp"
             android:background="@drawable/collect_bg"
             android:elevation="10dp">
 
@@ -91,7 +91,7 @@
                 android:id="@+id/ic_collect_arrow"
                 android:layout_width="13dp"
                 android:layout_height="13dp"
-                android:layout_marginStart="8dp"
+                android:layout_marginStart="10dp"
                 android:src="@drawable/ic_collect_arrow"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@id/tv_collect_device"

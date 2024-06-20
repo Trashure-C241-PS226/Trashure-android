@@ -40,6 +40,12 @@ class ProfileViewModel(private val repository: Repository) : ViewModel() {
         return repository.getSession().asLiveData()
     }
 
+    fun logout() {
+        viewModelScope.launch {
+            repository.logout()
+        }
+    }
+
     fun getUserById() {
         _onLoad.value = true
         viewModelScope.launch {
@@ -61,11 +67,9 @@ class ProfileViewModel(private val repository: Repository) : ViewModel() {
                     _subdistrict.value = response.data?.kecamatan ?: ""
                 },
                 onFailure = { error ->
-                    Log.e("ProfilViewModel", "Error: ${error.message}")
+                    Log.e("ProfileViewModel", "Error: ${error.message}")
                 }
             )
         }
     }
-
-
 }

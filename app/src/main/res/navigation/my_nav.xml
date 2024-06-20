@@ -20,6 +20,9 @@
             app:destination="@id/roleFragment"
             app:popUpTo="@id/splashFragment"
             app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_splashFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
     </fragment>
     <fragment
         android:id="@+id/viewPagerFragment"
@@ -37,4 +40,9 @@
         android:name="com.example.trashure.ui.role.RoleFragment"
         android:label="fragment_role"
         tools:layout="@layout/fragment_role" />
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.trashure.ui.dashboard.screen.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
 </navigation>

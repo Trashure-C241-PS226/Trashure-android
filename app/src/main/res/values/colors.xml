@@ -15,4 +15,5 @@
     <color name="YellowWarning">#D2D700</color>
     <color name="Grey">#828282</color>
     <color name="navBar">#FBFBFB</color>
+    <color name="DarkGrey">#45464F</color>
 </resources>

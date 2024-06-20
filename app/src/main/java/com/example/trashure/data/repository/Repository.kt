@@ -32,6 +32,10 @@ class Repository(
         return userPreference.getPredict()
     }
 
+    suspend fun logout() {
+        userPreference.logout()
+    }
+
     fun predictItem(
         brand: String,
         storage: String,
