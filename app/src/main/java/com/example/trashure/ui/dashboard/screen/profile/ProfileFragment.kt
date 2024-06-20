@@ -107,7 +107,14 @@ class ProfileFragment : Fragment() {
 
     private fun setEditMode(isEditMode: Boolean) {
         binding.apply {
-            listOf(etUsername, etPhoneNumber, etProvince, etCity, etSubdistrict, btnChangePicture).forEach {
+            listOf(
+                etUsername,
+                etPhoneNumber,
+                etProvince,
+                etCity,
+                etSubdistrict,
+                btnChangePicture
+            ).forEach {
                 it.isEnabled = isEditMode
                 it.isClickable = isEditMode
             }
@@ -128,28 +135,28 @@ class ProfileFragment : Fragment() {
             viewModel.getUserById()
         }
 
-        viewModel.image.observe(viewLifecycleOwner){
+        viewModel.image.observe(viewLifecycleOwner) {
             Glide.with(this)
                 .load(it)
                 .into(binding.imgProfile)
         }
-        viewModel.userName.observe(viewLifecycleOwner){
+        viewModel.userName.observe(viewLifecycleOwner) {
             binding.tvUsernameProfile.text = it
             binding.etUsername.setText(it)
         }
-        viewModel.email.observe(viewLifecycleOwner){
+        viewModel.email.observe(viewLifecycleOwner) {
             binding.tvEmailProfile.text = it
         }
-        viewModel.phoneNumber.observe(viewLifecycleOwner){
+        viewModel.phoneNumber.observe(viewLifecycleOwner) {
             binding.etPhoneNumber.setText(it)
         }
-        viewModel.province.observe(viewLifecycleOwner){
+        viewModel.province.observe(viewLifecycleOwner) {
             binding.etProvince.setText(it)
         }
-        viewModel.city.observe(viewLifecycleOwner){
+        viewModel.city.observe(viewLifecycleOwner) {
             binding.etCity.setText(it)
         }
-        viewModel.subdistrict.observe(viewLifecycleOwner){
+        viewModel.subdistrict.observe(viewLifecycleOwner) {
             binding.etSubdistrict.setText(it)
         }
     }
