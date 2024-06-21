@@ -38,10 +38,10 @@
     <string name="registration_message">Please login with the account you have created</string>
     <string name="ongoing_title">Ongoing</string>
     <string name="tv_ongoing_model">Iphone 13 Pro</string>
-    <string name="tv_ongoing_brand">Brand</string>
-    <string name="tv_ongoing_storage">Storage</string>
-    <string name="tv_ongoing_ram">RAM</string>
-    <string name="tv_ongoing_collector">Category</string>
+    <string name="tv_ongoing_brand">Brand :</string>
+    <string name="tv_ongoing_storage">Storage :</string>
+    <string name="tv_ongoing_ram">RAM :</string>
+    <string name="tv_ongoing_collector">Category :</string>
     <string name="et_ongoing_brand">Apple</string>
     <string name="et_ongoing_storage">128</string>
     <string name="et_ongoing_ram">6</string>
