@@ -1,5 +1,6 @@
 package com.example.trashure.ui.onboarding.screens
 
+import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -26,11 +27,20 @@ class ThirdScreen : Fragment() {
         finishButton = view.findViewById(R.id.finish_button)
         finishButton.setOnClickListener {
             findNavController().navigate(R.id.action_viewPagerFragment_to_roleFragment)
+            onBoardingFinished()
         }
 
         val skip = view.findViewById<TextView>(R.id.skip_text)
         skip.setOnClickListener {
             findNavController().navigate(R.id.action_viewPagerFragment_to_roleFragment)
+            onBoardingFinished()
         }
+    }
+
+    private fun onBoardingFinished() {
+        val sharedPref = requireActivity().getSharedPreferences("onBoarding", Context.MODE_PRIVATE)
+        val editor = sharedPref.edit()
+        editor.putBoolean("Finished", true)
+        editor.apply()
     }
 }

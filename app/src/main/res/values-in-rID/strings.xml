@@ -38,7 +38,7 @@
     <string name="registration_success">Daftar Berhasil</string>
     <string name="registration_message">Silakan login dengan akun yang telah Anda buat</string>
     <string name="ongoing_title">Sedang berlangsung</string>
-    <string name="tv_ongoing_model">Iphone 12 Pro</string>
+    <string name="tv_ongoing_model">Iphone 13 Pro</string>
     <string name="tv_ongoing_brand">Merek</string>
     <string name="tv_ongoing_storage">Penyimpanan</string>
     <string name="tv_ongoing_ram">RAM</string>
@@ -46,7 +46,7 @@
     <string name="et_ongoing_brand">Apple</string>
     <string name="et_ongoing_storage">128</string>
     <string name="et_ongoing_ram">6</string>
-    <string name="et_ongoing_collector"></string>
+    <string name="et_ongoing_collector">3</string>
     <string name="tv_ongoing_price">Harga :</string>
     <string name="et_ongoing_price"></string>
     <string name="tv_ongoing_status">Status :</string>

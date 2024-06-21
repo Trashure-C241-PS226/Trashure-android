@@ -20,7 +20,7 @@ class ViewPagerFragment : Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.fragment_view_pager, container, false)
 
-        val fragmentList = arrayListOf<Fragment>(
+        val fragmentList = arrayListOf(
             FirstScreen(),
             SecondScreen(),
             ThirdScreen()

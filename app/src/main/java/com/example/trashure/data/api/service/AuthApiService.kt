@@ -1,6 +1,5 @@
 package com.example.trashure.data.api.service
 
-import com.example.trashure.data.response.GetUserByIdResponse
 import com.example.trashure.data.response.LoginResponse
 import com.example.trashure.data.response.RegisterResponse
 import retrofit2.http.Field

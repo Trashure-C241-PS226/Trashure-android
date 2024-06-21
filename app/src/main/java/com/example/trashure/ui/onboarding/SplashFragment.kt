@@ -1,5 +1,6 @@
 package com.example.trashure.ui.onboarding
 
+import android.content.Context
 import android.os.Bundle
 import android.os.Handler
 import androidx.fragment.app.Fragment
@@ -16,10 +17,19 @@ class SplashFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
+        @Suppress("DEPRECATION")
         Handler().postDelayed({
-            findNavController().navigate(R.id.action_splashFragment_to_viewPagerFragment)
+            if (onBoardingFinished()) {
+                findNavController().navigate(R.id.action_splashFragment_to_roleFragment)
+            } else {
+                findNavController().navigate(R.id.action_splashFragment_to_viewPagerFragment)
+            }
         }, 3000)
-
         return inflater.inflate(R.layout.fragment_splash, container, false)
+    }
+
+    private fun onBoardingFinished(): Boolean {
+        val sharedPref = requireActivity().getSharedPreferences("onBoarding", Context.MODE_PRIVATE)
+        return sharedPref.getBoolean("Finished", false)
     }
 }

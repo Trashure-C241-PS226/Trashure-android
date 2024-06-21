@@ -86,6 +86,7 @@ class CollectDeviceFragment : Fragment() {
                                 Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
                             intent.putExtra("IMAGE_URI", uri)
                             startActivity(intent)
+                            showToast(response.data.message)
                         }
                     }
 

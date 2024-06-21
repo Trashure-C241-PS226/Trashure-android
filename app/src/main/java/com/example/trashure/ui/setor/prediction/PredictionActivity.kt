@@ -23,6 +23,7 @@ class PredictionActivity : AppCompatActivity() {
         binding = ActivityPredictionBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        @Suppress("DEPRECATION")
         val imageUri: Uri? = intent.getParcelableExtra("IMAGE_URI")
 
         viewModel.getPredict().observe(this) {

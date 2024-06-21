@@ -9,6 +9,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.activity.result.PickVisualMediaRequest
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.fragment.app.Fragment
@@ -58,21 +59,6 @@ class ProfileFragment : Fragment() {
         binding.btnSaveProfile.setOnClickListener {
             setEditMode(false)
             val updatedUser = DetailUser(
-//                image = binding.imgProfile,
-//                if (currentImageUri == null) {
-//                    Toast.makeText(this, "Foto tidak boleh kosong!", Toast.LENGTH_SHORT).show()
-//                } else {
-//                    currentImageUri?.let { uri ->
-//                        val imageFile = uriToFile(uri, requireContext()).reduceImgSize()
-//                        Log.d("Image File", "showImage: ${imageFile.path}")
-//
-//                        val multipartBody = MultipartBody.Part.createFormData(
-//                            "photo",
-//                            imageFile.name,
-//                            imageFile.asRequestBody("image/jpeg".toMediaType())
-//                        )
-//                    }
-//                }
                 username = binding.etUsername.text.toString(),
                 nomor = binding.etPhoneNumber.text.toString(),
                 provinsi = binding.etProvince.text.toString(),
@@ -80,6 +66,7 @@ class ProfileFragment : Fragment() {
                 kecamatan = binding.etSubdistrict.text.toString()
             )
             viewModel.updateUser(updatedUser)
+            Toast.makeText(requireContext(), "Profile berhasil dirubah", Toast.LENGTH_SHORT).show()
         }
 
         binding.btnChangePicture.setOnClickListener {
