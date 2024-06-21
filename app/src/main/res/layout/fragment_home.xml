@@ -211,7 +211,7 @@
                 android:id="@+id/et_ongoing_brand"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="30dp"
+                android:layout_marginStart="40dp"
                 android:layout_marginTop="3dp"
                 android:fontFamily="@font/roboto"
                 android:text="@string/et_ongoing_brand"
